@@ -1,6 +1,6 @@
 function Form({ setTitulo, setImgSRC, setDescripcion, agregarPost }) {
   return (
-    <div className="form">
+    <div className="form mb-5">
       <div className="mb-2">
         <h6>Agregar post</h6>
         <label>Título</label>

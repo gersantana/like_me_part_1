@@ -1,21 +1,13 @@
 const routes = require('express').Router()
-const controllers = require('../controllers/index')
+const { getController, postController } = require('../controllers/index')
+const { getDataController } = getController
+const { newPostController } = postController
 
 
+routes.get("/posts", getDataController)
 
 
-
-routes.get("/posts", (req, res) => {
-    console.log(res)
-    res.send({hola: 'hola'}) 
-})
-
-
-
-// routes.post("/posts", (req, res) => {
-//     console.log("post")
-//     res.end("readyPost") 
-// })
+routes.post("/posts", newPostController)
 
 
 module.exports = routes
